@@ -172,7 +172,7 @@ class StudentAssessment {
 	
 }
 
-
+// Alphabet check start
 class AlphabetCheck{
 	private String check;
 //	getters
@@ -200,11 +200,29 @@ class AlphabetCheck{
 	}
 	
 }
+//Alphabet check end
+
+//Array check start
+class Arraycheck{
+	Arraycheck(){
+		int number;
+		int index;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Put the number for the arrays you want to put inside the array");
+		number = sc.nextInt();
+		System.out.println("Put the index inside");
+		for(int i = 1; i<=number; i++) {
+			index = sc.nextInt();
+		}
+		System.out.println("Congrats");
+	}
+}
+//Array check end
 
 public class Execptionpractice {
 
 	public static void main(String[] args) {
-		new AlphabetCheck();
+		new Arraycheck();
 		// TODO Auto-generated method stub
 
 	}
