@@ -174,9 +174,17 @@ class StudentAssessment {
 
 
 class AlphabetCheck{
-	String check;
-	AlphabetCheck(String check){
-		this.check = check;
+	private String check;
+//	getters
+	public String getCheck() {
+		return check;
+	}
+	AlphabetCheck(){
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter your words/values");
+		check = sc.nextLine();
+		
 	for(int i = 0; i<check.length(); i++) {
 		char c = check.charAt(i);
 		if(Character.isDigit(c)) {
@@ -196,7 +204,7 @@ class AlphabetCheck{
 public class Execptionpractice {
 
 	public static void main(String[] args) {
-		new AlphabetCheck("42dhop$&");
+		new AlphabetCheck();
 		// TODO Auto-generated method stub
 
 	}
