@@ -208,13 +208,35 @@ class Arraycheck{
 		int number;
 		int index;
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Put the number for the arrays you want to put inside the array");
-		number = sc.nextInt();
-		System.out.println("Put the index inside");
-		for(int i = 1; i<=number; i++) {
-			index = sc.nextInt();
+//		try start
+		try {
+			System.out.println("How many numbers you want in an array");
+			number = sc.nextInt();
+			System.out.println("Put the numbers inside");
+			for(int i = 1; i<=number; i++) {
+				index = sc.nextInt();
+				
+			
+				int[] x = new int[number];
+				
+
+				for(int k = 0; k<number; k++) {
+					index = x[k];
+					System.out.println(x[k] );
+				}
+				
+			}
+			System.out.println("You have " + number);
 		}
-		System.out.println("Congrats");
+//		try start
+		
+//		catch start
+		catch(InputMismatchException e) {
+			System.out.println(e);
+		}
+//		catch end		
+	
+		
 	}
 }
 //Array check end
