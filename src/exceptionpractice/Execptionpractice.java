@@ -172,10 +172,31 @@ class StudentAssessment {
 	
 }
 
+
+class AlphabetCheck{
+	String check;
+	AlphabetCheck(String check){
+		this.check = check;
+	for(int i = 0; i<check.length(); i++) {
+		char c = check.charAt(i);
+		if(Character.isDigit(c)) {
+			System.out.println(c +  " = It is a digit");
+		}
+		else if(Character.isAlphabetic(c)) {
+			System.out.println(c + " = It is an alphabet");
+		}
+		else {
+			System.out.println(c + " = is neither an alphabet nor a digit");
+		}
+	}
+	}
+	
+}
+
 public class Execptionpractice {
 
 	public static void main(String[] args) {
-		new StudentAssessment(42);
+		new AlphabetCheck("42dhop$&");
 		// TODO Auto-generated method stub
 
 	}
