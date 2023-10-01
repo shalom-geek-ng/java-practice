@@ -1,5 +1,6 @@
 package exceptionpractice;
 import java.util.*;
+import java.io.*;
 
 class calculation{
 	int a = 10;
@@ -241,10 +242,30 @@ class Arraycheck{
 }
 //Array check end
 
+class lowBalanceException extends Exception{
+	
+	public String toString() {
+		return "Value should be more than N5000";
+	}
+}
+
+
+class ArrayChecck2{
+	ArrayChecck2(){
+		try {
+			throw new lowBalanceException();
+	}
+		catch(lowBalanceException e) {
+		System.out.println(e);
+	
+		}
+	}
+}
+
 public class Execptionpractice {
 
 	public static void main(String[] args) {
-		new Arraycheck();
+		new ArrayChecck2();
 		// TODO Auto-generated method stub
 
 	}
