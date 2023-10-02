@@ -262,12 +262,26 @@ class ArrayChecck2{
 	}
 }
 
-public class Execptionpractice {
+public class Execptionpractice  {
+	
+	static int area(int l, int b) throws Exception {
+		if(l<0 || b<0) {
+			throw new Exception();
+			
+			
+		}
+		return l*b;
+		
+	}
+	static void meth2() throws Exception {
+		System.out.println(area(-3,4));
+	}
 
-	public static void main(String[] args) {
-		new ArrayChecck2();
+
+	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
 
+		meth2();
 	}
 
 }
