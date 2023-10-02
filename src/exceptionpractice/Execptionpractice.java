@@ -264,6 +264,20 @@ class ArrayChecck2{
 
 public class Execptionpractice  {
 	
+	static int rectangleArea()  {
+		return 10/0;
+	}
+	static int rectanglemeth1() {
+		try {
+			return rectangleArea();
+		}
+		catch(Exception e) {
+			 System.out.println("Exception caught in rectanglemeth1: " + e);
+			return 2;
+			
+		}
+		}
+	
 	static int area(int l, int b) throws Exception {
 		if(l<0 || b<0) {
 			throw new Exception();
@@ -281,7 +295,7 @@ public class Execptionpractice  {
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
 
-		meth2();
+		rectanglemeth1();
 	}
 
 }
