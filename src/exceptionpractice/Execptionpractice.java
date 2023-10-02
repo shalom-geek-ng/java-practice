@@ -1,5 +1,6 @@
 package exceptionpractice;
 import java.util.*;
+import exceptionpractice.ArrayClass;
 import java.io.*;
 
 class calculation{
@@ -327,15 +328,14 @@ public class Execptionpractice  {
 		return l*b;
 		
 	}
-	static void meth2() throws Exception {
-		System.out.println(area(-3,4));
-	}
+	
 
 
-	public static void main(String[] args) throws AgeException {
+	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
 		
-		new personInput();
+		ArrayClass c =new ArrayClass();
+		c.meth2();
 
 		
 	}
