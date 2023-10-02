@@ -262,6 +262,35 @@ class ArrayChecck2{
 	}
 }
 
+
+class AgeException extends Exception{
+	public String toString() {
+		return "Your age is not a digit bro";
+	}
+}
+
+class personInput{
+	Integer age;
+	String str = "";
+	char c;
+	personInput() throws AgeException{
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter your age: ");
+		age = input.nextInt();
+		str = str + age;
+		for(int i = 0; i<str.length(); i++) {
+			 c = str.charAt(i);
+		}
+		if(Character.isAlphabetic(c)) {
+			throw new AgeException();
+		}
+			System.out.println("You are " + str + " years old");
+	}
+}
+
+
+
+
 public class Execptionpractice  {
 	
 	static int rectangleArea()  {
@@ -278,6 +307,17 @@ public class Execptionpractice  {
 		}
 		}
 	
+	
+	
+	static int Rectangle2Area(int l,int b) throws Exception{
+		if(l<0 || b<0) {
+			throw new Exception();
+		}
+		return l*b;
+	}
+	static void rectanglemeth2() throws Exception {
+		System.out.println(Rectangle2Area(3,4));
+	}
 	static int area(int l, int b) throws Exception {
 		if(l<0 || b<0) {
 			throw new Exception();
@@ -292,10 +332,12 @@ public class Execptionpractice  {
 	}
 
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) throws AgeException {
 		// TODO Auto-generated method stub
+		
+		new personInput();
 
-		rectanglemeth1();
+		
 	}
 
 }
